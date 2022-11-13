@@ -20,7 +20,14 @@ let choices = {
         }
     },
     'guitar': {
-        'text': "Some months have passed since you got your guitar. It's starting to get pretty hard and it demands further practicing for you to get any better. It would be easier and much more fun to play video games at this moment. Type <b>A</b> for guitar and <b>B</b> for drums.",
+        'text': "Some months have passed since you got your guitar. It's starting to get pretty hard and it demands further practicing for you to get any better. It would be easier and much more fun to play video games at this moment. Type <b>A</b> for practice guitar and <b>B</b> for play video games.",
+        'options': {
+            'A': 'practice',
+            'B': 'games'
+        }
+    },
+    'drums': {
+        'text': "Some months have passed since you got your drums. It's starting to get pretty hard and it demands further practicing for you to get any better. It would be easier and much more fun to play video games at this moment. Type <b>A</b> for practice drums and <b>B</b> for play video games.",
         'options': {
             'A': 'practice',
             'B': 'games'
