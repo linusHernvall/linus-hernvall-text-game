@@ -6,9 +6,17 @@
 //   }
 
 let currentPath = 'start';
+
 let storyField = document.getElementById ('text-story');
 storyField.innerHTML = paths[currentPath].text;
+
+let invalidCommand = document.getElementById('invalid-command');
+
 let inputChoice = document.getElementById('input-choice');
+inputChoice.addEventListener('keyup', (event) => {
+    invalidCommand.innerHTML = ''; 
+}) 
+
 
 function commandExists(input) {
     if (input === 'A' || input === 'B' ) {
@@ -19,20 +27,16 @@ function commandExists(input) {
 
 function runCommand(input) {
     if (input === 'A') {
-        
-        currentPath =  paths[currentPath].options.A
+        currentPath = paths[currentPath].options.A;
+        storyField.innerHTML = paths[currentPath].text;
+    } else {
+        currentPath = paths[currentPath].options.B;
         storyField.innerHTML = paths[currentPath].text;
     }
 }
 
 
-function commandAvailable() {
-    
-}
 
-
-
-// 
 function readCommand() {
     document.getElementById('btn-accept');
     let value = inputChoice.value.toUpperCase();
@@ -40,19 +44,7 @@ function readCommand() {
         storyField.innerHTML = 'Running command ' + value;
         runCommand(value);
     } else {
-        storyField.innerHTML = "Invalid command!";
+        invalidCommand.innerHTML  = "Invalid command!";
+        inputChoice.focus();
     }
 }
-
-
-
-
-
-
-
-/**
- * This is a object of the choices and paths in the story.
- *  
- */
-
-
