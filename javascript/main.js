@@ -1,17 +1,62 @@
 // window.addEventListener('DOMContentLoaded', main);
 
+
 // function main() {
 //     addEventListeners();
-//     // call other function in future....
 //   }
 
-let inputOption = document.getElementById('input-option');
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     let buttonAccept = document.getElementById('btn-accept');
+//     let inputChoice = document.getElementById('input-choice');
+//     buttonAccept.addEventListener('click', function() {
+          
+// })
+
+function commandExists(input) {
+    switch (input) {
+        case 'a':
+            
+    }
+}
+
+function runCommand() {
+
+}
+
+
+function commandAvailable() {
+    
+}
+
+
+
+// 
+function readCommand() {
+    document.getElementById('btn-accept');
+    let value = inputChoice.value.toLowerCase();
+    if (commandExists(value)) {
+        runCommand(value);
+    } else {
+        let storyField = document.getElementById ('text-story');
+        storyField.innerHTML = "Invalid command!";
+    }
+    console.log(inputChoice.value.toLowerCase());
+}
+
+
+let inputChoice = document.getElementById('input-choice');
 
 
 
 
-// This is a object of the choices and paths in the story.
-let choices = {
+
+/**
+ * This is a object of the choices and paths in the story.
+ *  
+ */
+let paths = {
     'start': {
         'text': "This is the first day of your coming music career. You're in the music store and you can't \
         decide if you want to start to play guitar or drums. Type <b>A</b> for guitar and <b>B</b> for drums.",
