@@ -16,6 +16,10 @@ let inputChoice = document.getElementById('input-choice');
 inputChoice.addEventListener('keyup', (event) => {
     invalidCommand.innerHTML = '';
 })
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3b398fbeaec22ed1757c2518e56229c58efb869c
 
 function commandExists(input) {
     if (input === 'A' || input === 'B') {
