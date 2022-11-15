@@ -14,8 +14,8 @@ let invalidCommand = document.getElementById('invalid-command');
 
 let inputChoice = document.getElementById('input-choice');
 inputChoice.addEventListener('keyup', (event) => {
-    invalidCommand.innerHTML = ''; 
-}) 
+    invalidCommand.innerHTML = '';
+})
 
 
 function commandExists(input) {
@@ -26,13 +26,8 @@ function commandExists(input) {
 }
 
 function runCommand(input) {
-    if (input === 'A') {
-        currentPath = paths[currentPath].options.A;
-        storyField.innerHTML = paths[currentPath].text;
-    } else {
-        currentPath = paths[currentPath].options.B;
-        storyField.innerHTML = paths[currentPath].text;
-    }
+    currentPath = paths[currentPath].options[input];
+    storyField.innerHTML = paths[currentPath].text;
 }
 
 
